@@ -28,7 +28,7 @@ export function ProjectMedia({ post, previewPhotos = false }: { post: PortfolioP
     </div>}
     <div className={styles.videoCaption}>
       {hasVideo && post.photos?.length ? <div className={styles.mediaModes}><button aria-pressed={mode === 'video'} onClick={() => setMode('video')}>Видео</button><button aria-pressed={mode === 'photos'} onClick={() => setMode('photos')}>Фото · {photos.length}</button></div> : mode === 'video' ? <span>ДЕМОНСТРАЦИЯ В РАБОТЕ</span> : null}
-      <a href={mode === 'video' ? post.linkYouTube : photo.src} target="_blank" rel="noreferrer">{mode === 'video' ? 'Открыть видео' : 'Открыть фото'} ↗</a>
+      <>{mode === 'video' && <a href={post.linkYouTube} target="_blank" rel="noreferrer">Открыть видео ↗</a>}</>
     </div>
     </div>
   </>;
