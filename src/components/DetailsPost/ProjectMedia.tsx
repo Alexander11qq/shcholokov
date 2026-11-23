@@ -23,7 +23,7 @@ export function ProjectMedia({ post, previewPhotos = false }: { post: PortfolioP
     <div className={styles.mediaFooter}>
     {mode === 'photos' && photos.length > 1 && <div className={styles.thumbnails} role="group" aria-label="Выбрать фотографию">
       {photos.map((item, index) => <button key={item.src} aria-label={`Фото ${index + 1}: ${item.alt}`} aria-pressed={index === active} onClick={() => { setActive(index); setFailed(false); }}>
-        <img src={item.src} alt="" loading="lazy" />
+        <img src={'thumbnail' in item ? item.thumbnail : item.src} alt="" loading="lazy" />
       </button>)}
     </div>}
     <div className={styles.videoCaption}>

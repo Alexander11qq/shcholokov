@@ -2,6 +2,7 @@ export interface ProjectPhoto {
   src: string;
   alt: string;
   caption?: string;
+  thumbnail?: string;
 }
 
 export interface PortfolioProject {
@@ -132,20 +133,23 @@ const videoPosts: PortfolioProject[] = [
     }
   ],
   "shortDescription": "Инсталляция, сравнивающая мимическую реакцию на пять видеосюжетов",
-  "preview": `${import.meta.env.BASE_URL}projects/otklik/DSC00791.jpg`,
+  "preview": `${import.meta.env.BASE_URL}projects/otklik/DSC00791-thumb.webp`,
   "photos": [
     {
-      "src": `${import.meta.env.BASE_URL}projects/otklik/DSC00791.jpg`,
+      "src": `${import.meta.env.BASE_URL}projects/otklik/DSC00791.webp`,
+      "thumbnail": `${import.meta.env.BASE_URL}projects/otklik/DSC00791-thumb.webp`,
       "alt": "Общий вид световой инсталляции и тач-панели",
       "caption": "Общий вид инсталляции"
     },
     {
-      "src": `${import.meta.env.BASE_URL}projects/otklik/DSC01211.jpg`,
+      "src": `${import.meta.env.BASE_URL}projects/otklik/DSC01211.webp`,
+      "thumbnail": `${import.meta.env.BASE_URL}projects/otklik/DSC01211-thumb.webp`,
       "alt": "Посетитель запускает взаимодействие на тач-панели",
       "caption": "Запуск сценария на тач-панели"
     },
     {
-      "src": `${import.meta.env.BASE_URL}projects/otklik/DSC00824.jpg`,
+      "src": `${import.meta.env.BASE_URL}projects/otklik/DSC00824.webp`,
+      "thumbnail": `${import.meta.env.BASE_URL}projects/otklik/DSC00824-thumb.webp`,
       "alt": "Круглый экран и световые элементы инсталляции",
       "caption": "Экран и световая композиция"
     }
